@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+    <link type="text/css" rel="stylesheet" href="wizard.css" />
+<script type="text/javascript" language="javascript" src="interview.js">
+		</script>
+</head>
+<body onload = "load()">
+	<div class="body">
+		<div class="wrap">
+			<div class = "centrecolumn">
+				<div class="content">
+				<form class="center" id="InterviewWizard" action="" method="post">
+				<table class="center" border="1" cellpadding="5" id="HeaderTableStep1">
+				<tr>
+				<td id="HeaderTableStep2" style="background-color:Silver">
+				<b> Step 1: </b> &nbsp; Personal Details
+				</td>
+				<td id="HeaderTableStep3" style="background-color:Silver">
+				<b> Step 2: </b> &nbsp; Academic Information
+				</td>
+				<td id="HeaderTableStep4" style="background-color:Silver">
+				<b> Step 3: </b> &nbsp; Skills
+				</td>
+				<td id="HeaderTableStep5" style="background-color:Silver">
+				<b> Step 4: </b> &nbsp; Review And Submit
+				</td>
+				</tr>				
+				</table>
+				<br/>
+				
+				<span id="Step1" style="display:inline">
+					<table class="center" border="0" cellpadding="5" cellspacing="0">
+					<tr> 
+					<td align="right">
+						First Name:
+						</td>
+						<td> <input id="FirstName" name="FirstName" type="text"/>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<span id="errFirstName"></span>
+						</td>
+					</tr>
+						<tr> 
+					<td align="right">
+						Middle Name:
+						</td>
+						<td> <input id="MiddleName" name="MiddleName" type="text"/>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						</td>
+					</tr>
+						<tr> 
+					<td align="right">
+						Last Name:
+						</td>
+						<td> <input id="LastName" name="LastName" type="text"/>
+						&nbsp;&nbsp;&nbsp;&nbsp;
+						<span id="errLastName"></span>
+						</td>
+					</tr>
+				</table>
+				</span>
+				
+				<span id="Step2" style="display:none">
+				<table class="center" border="0" cellpadding="5" cellspacing="0">
+				<tr>
+					<td align="right">
+						Please Enter Qualification:
+					</td>
+					<td>
+						<input id="Qualification" name="Qualification" type="text"/>
+					</td>
+					</tr>					
+				</table>
+				</span>
+				
+				<span id="Step3" style="display:none">
+				<table class="center" border="0" cellpadding="5" cellspacing="0">
+				<tr>
+					<td align="left" colspan="2">
+					Select Skills :
+					</td>
+				</tr>
+				<tr>
+					<td align="right">
+					Java
+					</td>
+					<td>
+						<input id="CheckboxJava" name="CheckboxJava" type="checkbox" value="Yes"/>
+					</td>
+				</tr>
+					<tr>
+					<td align="right">
+					SQL
+					</td>
+					<td>
+						<input id="CheckboxSQL" name="CheckboxSQL" type="checkbox" value="Yes"/>
+					</td>
+				</tr>
+					<tr>
+					<td align="right">
+					JavaScript
+					</td>
+					<td>
+						<input id="CheckboxJavaScript" name="CheckboxJavaScript" type="checkbox" value="Yes"/>
+					</td>
+				</tr>
+					<tr>
+					<td align="right">
+						HTML
+					</td>
+					<td>
+						<input id="CheckboxHTML" name="CheckboxHTML" type="checkbox" value="Yes"/>
+					</td>
+				</tr>
+				</table>
+				</span>
+				
+				<span id="Step4" style="display:none">
+				<table class="center" border="0" cellpadding="5" cellspacing="0">
+				<tr>
+				<td colspan="2">
+					Final Review:
+				</td>
+				</tr>
+				<tr>
+					<td align="right">
+					First Name:
+					</td>
+					<td id="ReviewFirstName"></td>
+				</tr>
+					<tr>
+					<td align="right">
+					Middle Name:
+					</td>
+					<td id="ReviewMiddleName"></td>
+				</tr>
+					<tr>
+					<td align="right">
+					Last Name:
+					</td>
+					<td id="ReviewLastName"></td>
+				</tr>
+					<tr>
+					<td align="right">
+					Qualification:
+					</td>
+					<td id="ReviewQualification"></td>
+				</tr>
+				
+				<tr>
+					<td align="left">
+						Your Skills are:
+					</td>
+					<td></td>
+					</tr>	
+					
+					<tr> 
+						<td align="right">
+						Java
+						</td>
+						<td id="ReviewJava"></td>
+					</tr>
+						<tr> 
+						<td align="right">
+						SQL
+						</td>
+						<td id="ReviewSQL"></td>
+					</tr>
+						<tr> 
+						<td align="right">
+						JavaScript
+						</td>
+						<td id="ReviewJavaScript"></td>
+					</tr>
+						<tr> 
+						<td align="right">
+						HTML
+						</td>
+						<td id="Reviewhtml"></td>
+					</tr>
+					<tr>
+					<th>
+					<button type="button" onclick="window.open('thankYou.html')">
+					Submit
+					</button>
+					</th>
+					</tr>
+					</table>
+					</span>				
+				</form>
+
+			</div>
+
+			</div>
+
+		</div>
+	</div>
+	<button id="previous" onclick="PreviousQuestion()"> Previous </button>
+	<button id="next" name="Step2"onclick="NextQuestion()"> Next</button>
+	<button id="submit" onclick="Show()">Submit</button>
+	<div id="results"></div>
+</body>
+</html>
